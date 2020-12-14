@@ -32,7 +32,7 @@ function fav_con($mid) { ?>
             if(current_user_can('level_10') || get_post_meta($post->ID, '_visible', true)!="true"):
           ?>
             <div class="xe-card <?php echo io_get_option('columns') ?>">
-              <a href="<?php echo io_get_option('is_go')? '/go/?url='.base64_encode($link_url) : $link_url ?>" target="_blank" class="xe-widget xe-conversations box2 label-info" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="<?php echo $link_url ?>">
+              <a href="<?php echo io_get_option('is_go')? '/go/?url='.base64_encode($link_url) : $link_url ?>" target="_blank" class="xe-widget xe-conversations box2 label-info" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="<?php echo get_post_meta($post->ID, '_sites_sescribe', true) ?>">
                 <div class="xe-comment-entry">
                   <div class="xe-user-img">
                     <?php if(io_get_option('lazyload')): ?>
